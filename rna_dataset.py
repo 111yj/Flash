@@ -70,7 +70,7 @@ class GeneDataset(Dataset):#数据集类 将基因序列转换为k-mer序列，�
 
 def load_samples_with_labels(file_path):
     samples_with_labels = []
-    current_label = None  # 当前标签初始化为None
+    current_label = None
 
     with open(file_path, 'r') as file:
         for line in file:
@@ -82,7 +82,7 @@ def load_samples_with_labels(file_path):
             elif line.startswith('>-sample'):
                 current_label = 0  # 负样本标签为0
             else:
-                # 这里假设没有标记的行都是序列行
+
                 sequence = line
                 if current_label is not None:
                     # 只有在设置了当前标签后才添加序列

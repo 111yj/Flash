@@ -43,5 +43,5 @@ model = MyTransformerModel()
 # 将模型移动到设备（CPU 或 GPU）
 device = torch.device("cpu")
 model.to(device)
-# # 打印模型结构
+# ...打印模型结构
 print(model)
